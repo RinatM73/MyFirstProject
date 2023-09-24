@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def resultsview(request):
+    return render(request, 'results/results.html')

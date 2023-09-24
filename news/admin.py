@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-from .models import Article
+from .models import News
 
-# admin.site.register(Article)
-@admin.register(Article)
-class ArticleAdmin(admin.ModelAdmin):
+@admin.register(News)
+class NewsAdmin(admin.ModelAdmin):
     list_display = ("title","date")
