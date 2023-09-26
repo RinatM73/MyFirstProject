@@ -27,31 +27,17 @@
 		<div class="shell">
 			<div class="cl">&nbsp;</div>
 			<ul>
-			    <li><a href="#">Новости</a></li>
-			    <li><a href="#">Фото</a></li>
-			    <li><a href="#">Видео</a></li>
+				<li><a href="{% url 'home' %}">Главная</a></li>
+			    <li><a href="{% url 'news' %}">Новости</a></li>
+				<li><a href="{% url 'results' %}">Результаты</a></li>
+			    <li><a href="{% url 'photo' %}">Фото</a></li>
+			    <li><a href="{% url 'video' %}">Видео</a></li>
 			</ul>
 			<div class="cl">&nbsp;</div>
 		</div>
 	</div>
 	<!-- End Navigation -->
 
-	<!-- Heading -->
-	<div id="heading">
-		<div class="shell">
-			<div id="heading-cnt">
-
-				<!-- Sub nav -->
-				<div id="side-nav">
-					<ul>
-					    <li class="active"><div class="link"><a href="#">Главная</a></div></li>
-					    <li><div class="link"><a href="#">Результаты</a></div></li>
-					    <li><div class="link"><a href="#">Фото</a></div></li>
-					</ul>
-				</div>
-			</div>	<!-- End Sub nav -->
-		</div>
-	</div>
 	{% block content %}
     {% endblock %}
 </body>

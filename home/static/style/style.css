@@ -38,12 +38,6 @@ h1#logo a {display: block; background: url(images/logo.gif) no-repeat 0 0; width
 #heading .shell {width: 983px; position: relative;}
 #heading-cnt {background: url(images/heading-cnt.png) no-repeat 0 0; width: 983px; height: 161px;}
 
-#side-nav ul {list-style-type: none; width: 205px; padding-top: 9px; padding-left: 20px;}
-#side-nav ul li {float: left; display: block; width: 205px; padding-bottom:5px;}
-#side-nav ul li a {width: 195px; height: 18px; display: block; padding-left: 10px; padding-top: 4px; text-transform: uppercase; color: #636363; font-size: 11px; font-weight: bold;position: relative;}
-#side-nav ul li .link {background: url(images/side-nav.png) no-repeat 0 0; width: 205px; height: 22px;}
-#side-nav ul li.active a {color: #77912b;}
-#side-nav ul li.active a:hover {text-decoration: none;}
 
 #heading-box {position: absolute; top: 9px; left: 235px;}
 #heading-box-cnt {background: url(images/heading-box.png) no-repeat 0 0; width: 709px; height: 316px; padding-top: 5px; padding-left: 4px;}
