@@ -2,7 +2,7 @@ from django.db import models
 
 
 class News(models.Model):
-    title = models.CharField('Заголовок',max_length=50)     # Строка с огр знаками
+    title = models.CharField('Заголовок',max_length=100)     # Строка с огр знаками
     desc = models.TextField('Описание')      # Строка с огр знаками
     image = models.ImageField('Изображение',upload_to='news/image/')       # Строка под Изображение
     date = models.DateField('Дата')        # Дата

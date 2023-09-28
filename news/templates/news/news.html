@@ -4,7 +4,7 @@
 {% for News in news %}
 
 <div class="card">
-    <h2 href>{{ News.title }}</h2>
+    <h2><a class="title" href="{% url 'news_det' News.id %}">{{ News.title }}</a></h2>
     <div class="card_lr">
         <div class="card_l">
             <img class="card_img" src="{{ News.image.url }}" alt="">
