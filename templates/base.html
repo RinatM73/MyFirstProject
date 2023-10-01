@@ -27,12 +27,33 @@
 	<div id="navigation">
 		<div class="shell">
 			<div class="cl">&nbsp;</div>
-			<ul>
-				<li><a href="{% url 'home' %}">Главная</a></li>
-			    <li><a href="{% url 'news' %}">Новости</a></li>
-				<li><a href="{% url 'results' %}">Результаты</a></li>
-			    <li><a href="{% url 'photo' %}">Фото</a></li>
-			    <li><a href="{% url 'video' %}">Видео</a></li>
+			<ul class="menu">
+				<li>
+					<a href="{% url 'home' %}">Главная</a>
+				</li>
+			    <li>
+					<a href="{% url 'news' %}">Новости</a>
+				</li>
+				<li>
+					<a href="{% url 'results' %}">Результаты</a>
+					<ul class="res_menu">
+						<li>
+							<a href="">Баскетбол</a>
+						</li>
+						<li>
+							<a href="">Футбол</a>
+						</li>
+						<li>
+							<a href="">Хоккей</a>
+						</li>
+					</ul>
+				</li>
+			    <li>
+					<a href="{% url 'photo' %}">Фото</a>
+				</li>
+			    <li>
+					<a href="{% url 'video' %}">Видео</a>
+				</li>
 			</ul>
 			<div class="cl">&nbsp;</div>
 		</div>

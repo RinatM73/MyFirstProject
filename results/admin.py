@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Results
+
+@admin.register(Results)
+class ResultsAdmin(admin.ModelAdmin):
+    list_display = ("sport","date_1")
