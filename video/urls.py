@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import *
+from . import views
 
 urlpatterns = [
-    path('video/', videoview, name = 'video'),
+    path('video/', views.videoview, name = 'video'),
 ]

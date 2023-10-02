@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Photo
 
 def photoview(request):
-    return render(request, 'photo/photo.html')
+    photo = Photo.objects.all()
+    return render(request, 'photo/photo.html', {'photo':photo})
