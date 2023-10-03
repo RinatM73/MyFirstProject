@@ -5,4 +5,5 @@
 
 .menu li:hover .res_menu {
     display: flex;
+    flex-direction: column;
 }

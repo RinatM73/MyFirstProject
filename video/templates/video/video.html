@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div>Video</div>
+{% for Video in video %}
+<div>
+    <video width="320" height="240" controls>
+    <source src="{{ Video.video.url }}" type="video/mp4">
+    </video>
+</div>
+<div>
+    <p>{{ Video.desc_2 }} </p>
+    <p>{{ Video.date_3 }}</p>
+</div>
+
+{% endfor %}
 
 {% endblock %}

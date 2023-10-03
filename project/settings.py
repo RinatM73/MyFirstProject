@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'photo',
     'video',
     'results',
+    'reguser'
 ]
 
 MIDDLEWARE = [

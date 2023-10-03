@@ -54,6 +54,23 @@
 			    <li>
 					<a href="{% url 'video' %}">Видео</a>
 				</li>
+				<li>
+					<a href="{% url 'profile' %}">Профиль</a>
+				</li>
+			</ul>
+			<ul class="menu_r">
+				{% if request.user.username %}
+					<li>
+						<a href="{% url 'logoutuser' %}">Выход</a>
+					</li>
+				{% else %}
+					<li>
+						<a href="{% url 'reguser' %}">Регистрация</a>
+					</li>
+					<li>
+						<a href="{% url 'loginuser' %}">Вход</a>
+					</li>
+				{% endif %}
 			</ul>
 			<div class="cl">&nbsp;</div>
 		</div>
