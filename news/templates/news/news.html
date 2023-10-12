@@ -14,24 +14,7 @@
             <p class="date">{{ News.date }}</p>
         </div>
     </div>
-    <div class="comments">
-        {% for comment in news.comments.all %}
-            {% if comment.approved_comment %}
-                <div class="comment">
-                    <div class="date">{{ comment.created_date }}</div>
-                    <strong>{{ comment.author }}</strong>
-                    <p>{{ comment.text|linebreaks }}</p>
-                </div>
-            {% endif %}
-        {% empty %}
-            <p>Комментариев пока нет...</p>
-        {% endfor %}
-    </div>
-    <hr>
-    <div class="card-body mt-5">
-        <a href="{% url 'news_comment' News.id %}" class="news-form">Добавить комментарий</a>
-        </form>
-    </div>
+
 </div>
 
 

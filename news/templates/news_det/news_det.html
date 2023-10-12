@@ -4,7 +4,18 @@
     <div class="card_det">
         <h1 class="title_det">{{ news.title }}</h1>
         <img class="img_det" src="{{ news.image.url }}" alt="">
-        <p class="desc_det">{{ news.desc|safe}}</p>
+        <p class="desc_det">{{ news.desc }}</p>
     </div>
+    <h4>Комментарии</h4>
+    {% for Сomment in comment %}
+        Пользователь - {{ comment.user }} <br>
+        {{ comment.text }} <br>
+        Добавлен {{ comment.created_date }}
+    {% endfor %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
 </main>    
 {% endblock %}

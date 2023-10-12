@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 
@@ -8,6 +9,7 @@ class News(models.Model):
     date = models.DateField('Дата')        # Дата
     url = models.URLField('Доп.источник', blank=True)        # Ссылка
 
+
     def __str__(self):
         return f"{self.title} | {self.date}"
 
@@ -17,16 +19,16 @@ class News(models.Model):
 
 
 class Comment(models.Model):
-    news = models.ForeignKey(News, on_delete=models.CASCADE, related_name='comments')
-    author = models.CharField(max_length=200)
-    text = models.TextField(blank=True)
-    created_date = models.DateTimeField(auto_now_add=True)
-    approved_comment = models.BooleanField(default=False)
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
+    news = models.ForeignKey(News, verbose_name='Новость', on_delete=models.CASCADE)
+    text = models.TextField('Комментарий', blank=True)
+    created_date = models.DateTimeField('Дата добавления', auto_now_add=True)
+    moderation = models.BooleanField('Модерация', default=False)
 
-    def approve(self):
-        self.approved_comment = True
-        self.save()
+    class Meta:
+        verbose_name = 'комментарий'
+        verbose_name_plural = 'Комментарии'
 
     def __str__(self):
-        return self.text
+        return  '{}'.format(self.user)
 

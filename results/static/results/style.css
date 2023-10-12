@@ -3,7 +3,12 @@
     transition: .3s;
 }
 
+.res_menu li {
+    background: grey;
+}
+
 .menu li:hover .res_menu {
     display: flex;
     flex-direction: column;
+
 }
