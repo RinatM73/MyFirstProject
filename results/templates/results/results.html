@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="results">
+    <h2>Результаты</h2>
 
-<h2>Результаты</h2>
-
-{% for Results in results %}
-
-<h3>{{ Results.sport }}</h3>
-<h4>{{ Results.tournament }}</h4>
-<div>{{ Results.team_1 }} - {{ Results.team_2 }}</div>
-<div>{{ Results.score_1 }} - {{ Results.score_2 }}</div>
-<div>{{ date_1 }}</div>
-
-{% endfor %}
-
+    {% for Results in results %}
+    <div class="result">
+        <h3>{{ Results.sport }}</h3>
+        <h4>{{ Results.tournament }}</h4>
+        <div>{{ Results.team_1 }} - {{ Results.team_2 }}</div>
+        <div>{{ Results.score_1 }} - {{ Results.score_2 }}</div>
+        <div>{{ date_1 }}</div>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

@@ -1,14 +1,8 @@
-.res_menu {
-    display: none;
-    transition: .3s;
+.results {
+    text-align: center;
+    margin-top: 30px;
 }
 
-.res_menu li {
-    background: grey;
-}
-
-.menu li:hover .res_menu {
-    display: flex;
-    flex-direction: column;
-
+.result {
+    margin-top: 20px;
 }

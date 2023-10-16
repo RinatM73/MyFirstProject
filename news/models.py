@@ -3,11 +3,14 @@ from django.db import models
 
 
 class News(models.Model):
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
     title = models.CharField('Заголовок',max_length=100)     # Строка с огр знаками
     desc = models.TextField('Описание')      # Строка с огр знаками
     image = models.ImageField('Изображение',upload_to='news/image/')       # Строка под Изображение
     date = models.DateField('Дата')        # Дата
     url = models.URLField('Доп.источник', blank=True)        # Ссылка
+
+
 
 
     def __str__(self):

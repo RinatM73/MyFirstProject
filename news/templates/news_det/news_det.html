@@ -6,16 +6,21 @@
         <img class="img_det" src="{{ news.image.url }}" alt="">
         <p class="desc_det">{{ news.desc }}</p>
     </div>
-    <h4>Комментарии</h4>
-    {% for Сomment in comment %}
-        Пользователь - {{ comment.user }} <br>
-        {{ comment.text }} <br>
-        Добавлен {{ comment.created_date }}
-    {% endfor %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Отправить</button>
-    </form>
+    <div class="comment">
+        <form action="" method="post">
+            <div class="form">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <button class="btn" type="submit">Отправить</button><br>
+        </form>
+        {% for comment in comments %}
+            <div class="comment_det">
+                Пользователь - {{ comment.user }} <br><br>
+                {{ comment.text }} <br><br>
+                Добавлен {{ comment.created_date }} <br><br>
+            </div>
+        {% endfor %}
+    </div>
 </main>    
 {% endblock %}

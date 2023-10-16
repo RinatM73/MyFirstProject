@@ -2,11 +2,9 @@
 {% block content %}
 
 {% for Photo in photo %}
-<div>
-    <img alt="" src="{{ Photo.image_1.url }}">
-</div>
-<div>
-    <p>{{ Photo.desc_1 }} </p>
+<div class="gall">
+    <img alt="" class="photo" src="{{ Photo.image_1.url }}">
+    <p class="desc">{{ Photo.desc_1 }} </p>
     <p>{{ Photo.date_2 }}</p>
 </div>
 

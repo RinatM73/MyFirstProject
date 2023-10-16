@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="prof">
     <h1>Профиль</h1>
-    {{ user_profile.first_name }}
-    {{ user_profile.last_name }}
-    {{ user_profile.age }}
-    {{ user_profile.about_me }}
-
-    <a href="{% url 'profileup' %}">Редактировать профиль</a>
+    <p>Имя: {{ user_profile.first_name }}</p>
+    <p>Фамилия: {{ user_profile.last_name }}</p>
+    <p>Возраст: {{ user_profile.age }}</p>
+    <p>О себе: {{ user_profile.about_me }}</p>
+</div>
+    <a class="red" href="{% url 'profileup' %}">Редактировать профиль</a>
 
 {% endblock %}
