@@ -11,58 +11,62 @@
 							<div class="cl">&nbsp;</div>
 
 							<!-- Main Slide Item -->
+							{% for news in news_list|slice:":1" %}
 							<div class="featured-main">
-								<a href="#"><img src="css/images/featured-main.jpg" alt="" /></a>
+								<a href="#"><img src="news.image.url" alt="" /></a>
 								<div class="featured-main-details">
 									<div class="featured-main-details-cnt">
-										<h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis urna, rhoncus a tempus in, blandit vel nibh. Sed interdum erat eget lacus commodo mattis.</p>
+										<h4><a href="#">{{ news.title }}</a></h4>
+										<p>{{ news.desc|truncatechars:100 }}</p>
 									</div>
 								</div>
 							</div>
+							{% endfor %}
+
 							<!-- End Main Slide Item -->
 
 							<div class="featured-side">
-
+								{% for news in news_list|slice:"2:6" %}
 								<!-- Slide Item 1 -->
 								<div class="featured-side-item">
 									<div class="cl">&nbsp;</div>
 									<a href="#" class="left"><img src="css/images/featured-side-1.jpg" alt="" /></a>
-									<h4><a href="#">Lorem ipsum dolor sit ame</a></h4>
+									<h4><a href="#">{{ news.title }}</a></h4>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis urna, rhoncus a tempus in</p>
 									<div class="cl">&nbsp;</div>
 								</div>
+								{% endfor %}
 								<!-- End Slide Item 1 -->
 
-								<!-- Slide Item 2 -->
-								<div class="featured-side-item">
-									<div class="cl">&nbsp;</div>
-									<a href="#" class="left"><img src="css/images/featured-side-2.jpg" alt="" /></a>
-									<h4><a href="#">Pellentesque tirpis urna</a></h4>
-									<p>Pellentesque turpis urna, rhoncus eget lacus commodo mattis.</p>
-									<div class="cl">&nbsp;</div>
-								</div>
-								<!-- End Slide Item 2 -->
+<!--								&lt;!&ndash; Slide Item 2 &ndash;&gt;-->
+<!--								<div class="featured-side-item">-->
+<!--									<div class="cl">&nbsp;</div>-->
+<!--									<a href="#" class="left"><img src="css/images/featured-side-2.jpg" alt="" /></a>-->
+<!--									<h4><a href="#">{{ news.title }}</a></h4>-->
+<!--									<p>Pellentesque turpis urna, rhoncus eget lacus commodo mattis.</p>-->
+<!--									<div class="cl">&nbsp;</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; End Slide Item 2 &ndash;&gt;-->
 
-								<!-- Slide Item 3 -->
-								<div class="featured-side-item">
-									<div class="cl">&nbsp;</div>
-									<a href="#" class="left"><img src="css/images/featured-side-3.jpg" alt="" /></a>
-									<h4><a href="#">Dolor si atema commodo</a></h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis urna</p>
-									<div class="cl">&nbsp;</div>
-								</div>
-								<!-- End Slide Item 3 -->
+<!--								&lt;!&ndash; Slide Item 3 &ndash;&gt;-->
+<!--								<div class="featured-side-item">-->
+<!--									<div class="cl">&nbsp;</div>-->
+<!--									<a href="#" class="left"><img src="css/images/featured-side-3.jpg" alt="" /></a>-->
+<!--									<h4><a href="#">{{ news.title }}</a></h4>-->
+<!--									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis urna</p>-->
+<!--									<div class="cl">&nbsp;</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; End Slide Item 3 &ndash;&gt;-->
 
-								<!-- Slide Item 4 -->
-								<div class="featured-side-item">
-									<div class="cl">&nbsp;</div>
-									<a href="#" class="left"><img src="css/images/featured-side-4.jpg" alt="" /></a>
-									<h4><a href="#">Adipsicing elit dolor una leo</a></h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis urna, rhoncus a tempus in</p>
-									<div class="cl">&nbsp;</div>
-								</div>
-								<!-- End Slide Item 4 -->
+<!--								&lt;!&ndash; Slide Item 4 &ndash;&gt;-->
+<!--								<div class="featured-side-item">-->
+<!--									<div class="cl">&nbsp;</div>-->
+<!--									<a href="#" class="left"><img src="css/images/featured-side-4.jpg" alt="" /></a>-->
+<!--									<h4><a href="#">{{ news.title }}</a></h4>-->
+<!--									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis urna, rhoncus a tempus in</p>-->
+<!--									<div class="cl">&nbsp;</div>-->
+<!--								</div>-->
+<!--								&lt;!&ndash; End Slide Item 4 &ndash;&gt;-->
 							</div>
 							<div class="cl">&nbsp;</div>
 						</div>
@@ -83,27 +87,27 @@
 					<ul>
 					    <li>
 					    	<small class="date">12.05.09</small>
-					    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					    	<p>{{ news.title }}</p>
 					    </li>
 					    <li>
 					    	<small class="date">12.05.09</small>
-					    	<p>Donec venenatis varius urna vitae congue.</p>
+					    	<p>{{ news.title }}</p>
 					    </li>
 					    <li>
 					    	<small class="date">12.05.09</small>
-					    	<p>Ullam vel neque ut lectus cursus dapibus.</p>
+					    	<p>{{ news.title }}</p>
 					    </li>
 					    <li>
 					    	<small class="date">12.05.09</small>
-					    	<p>Praesent pellentesque arcu convallis ante dignissim quis ultrices felis iaculis.</p>
+					    	<p>{{ news.title }}</p>
 					    </li>
 					    <li>
 					    	<small class="date">12.05.09</small>
-					    	<p>Ut eget lorem elit. Donec lorem eros, congue vel mollis non, tincidunt a nisl.</p>
+					    	<p>{{ news.title }}</p>
 					    </li>
 					    <li>
 					    	<small class="date">12.05.09</small>
-					    	<p>Curabitur consectetur tellus a diam tincidunt pellentesque. </p>
+					    	<p>{{ news.title }}</p>
 					    </li>
 					</ul>
 					<a href="#" class="archives">News Archives</a>
@@ -111,7 +115,7 @@
 				<div id="content">
 					<div class="cl">&nbsp;</div>
 					<div class="grey-box">
-						<h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+						<h3><a href="#">{{ news.title }}</a></h3>
 						<a href="#"><img src="css/images/main-1.jpg" alt="" /></a>
 						<p>
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum, odio tincidunt egestas</span>
@@ -119,7 +123,7 @@
 						 </p>
 					</div>
 					<div class="grey-box">
-						<h3><a href="#">Curabitur elementum, odio tincidunt </a></h3>
+						<h3><a href="#">{{ news.title }}</a></h3>
 						<a href="#"><img src="css/images/main-2.jpg" alt="" /></a>
 						<p>
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum, odio tincidunt egestas</span>
@@ -127,7 +131,7 @@
 						 </p>
 					</div>
 					<div class="grey-box last">
-						<h3><a href="#">Etiam iaculis tortor vel arcu porta consectetur.</a></h3>
+						<h3><a href="#">{{ news.title }}</a></h3>
 						<a href="#"><img src="css/images/main-3.jpg" alt="" /></a>
 						<p>
 							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum, odio tincidunt egestas</span>
