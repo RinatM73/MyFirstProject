@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <div class="card_det_v">
+        <p class="desc_det_v">{{ video_det.desc_2 }}</p>
+        <video class="video_det" poster="https://metaratings.ru/storage/images/fc/53/fc535e55ec73cdb43e83fa44bbf2a9a5.png" width="640" height="480" controls>
+            <source src="{{ video_det.video.url }}" type="video/mp4">
+        </video>
+
+    </div>
+</main>    
+{% endblock %}

@@ -26,7 +26,7 @@
 							<!-- End Main Slide Item -->
 
 							<div class="featured-side">
-								{% for news in news_list|slice:"2:6" %}
+								{% for news in news_list|slice:"1:5" %}
 								<!-- Slide Item 1 -->
 								<div class="featured-side-item">
 									<div class="cl">&nbsp;</div>
@@ -52,7 +52,7 @@
 				<div class="cl">&nbsp;</div>
 				<div id="sidebar">
 					<h2>Новости</h2>
-					{% for news in news_list|slice:"6:11" %}
+					{% for news in news_list|slice:"5:10" %}
 					<ul>
 					    <li>
 					    	<small class="date">{{ news.date }}</small>
@@ -65,7 +65,7 @@
 				<div id="content">
 					<div class="cl">&nbsp;</div>
 					<div class="grey-box">
-						{% for news in news_list|slice:"11:12" %}
+						{% for news in news_list|slice:"10:11" %}
 						<h3><a href="{% url 'news_det' news.id %}">{{ news.title }}</a></h3>
 						<a href="#"><img src="{{ news.image.url }}" alt="" /></a>
 						<p>
@@ -100,28 +100,28 @@
 						{% for videos in video_list|slice:"1:2" %}
 						<div class="video-item-box">
 							<p>{{ videos.desc_2 }}</p>
-							<a href="#" class="watch-now">Смотреть</a>
+							<a href="{% url 'video_det' videos.id %}" class="watch-now">Смотреть</a>
 						</div>
 						{% endfor %}
 						{% for videos in video_list|slice:"2:3" %}
 						<div class="video-item-box second">
 							<a href="#" class="left"><img src="css/images/video-2.jpg" alt="" /></a>
 							<p>{{ videos.desc_2 }}</p>
-							<a href="#" class="watch-now">Смотреть</a>
+							<a href="{% url 'video_det' videos.id %}" class="watch-now">Смотреть</a>
 						</div>
 						{% endfor %}
 						{% for videos in video_list|slice:"3:4" %}
 						<div class="video-item-box">
 							<a href="#" class="left"><img src="css/images/video-3.jpg" alt="" /></a>
 							<p>{{ videos.desc_2 }}</p>
-							<a href="#" class="watch-now">Смотреть</a>
+							<a href="{% url 'video_det' videos.id %}" class="watch-now">Смотреть</a>
 						</div>
 						{% endfor %}
 						{% for videos in video_list|slice:"4:5" %}
 						<div class="video-item-box second">
 							<a href="#" class="left"><img src="css/images/video-4.jpg" alt="" /></a>
 							<p>{{ videos.desc_2 }}</p>
-							<a href="#" class="watch-now">Смотреть</a>
+							<a href="{% url 'video_det' videos.id %}" class="watch-now">Смотреть</a>
 						</div>
 						{% endfor %}
 						<div class="cl">&nbsp;</div>
